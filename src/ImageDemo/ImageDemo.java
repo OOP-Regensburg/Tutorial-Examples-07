@@ -12,13 +12,17 @@ public class ImageDemo extends GraphicsApp {
     private static final int SCREEN_HEIGHT = 500;
     private static final Color BACKGROUND_COLOR = Colors.WHITE;
 
+    private Image birdImage;
+
     @Override
     public void initialize() {
         setCanvasSize(SCREEN_WIDTH, SCREEN_WIDTH);
+        birdImage = new Image(0,0,"data/bird.png");
     }
 
     @Override
     public void draw() {
         drawBackground(BACKGROUND_COLOR);
+        birdImage.draw();
     }
 }

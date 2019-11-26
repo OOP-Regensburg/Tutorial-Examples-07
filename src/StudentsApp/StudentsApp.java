@@ -25,10 +25,17 @@ public class StudentsApp {
     }
 
     private Student createStudentObject() {
+        Student student;
         System.out.println("Bitte gib die Informationen für den nächsten Studierenden ein.");
         String name = readString("Name: ");
         double grade = readDouble("Note: ");
-        Student student = new Student(name, grade);
+        String isMaster = readString("Master-Studierender (ja/nein): ");
+        if (isMaster.equals("ja")) {
+            double bachelorGrade = readDouble("Note (Bachelor): ");
+            student = new MasterStudent(name, grade, bachelorGrade);
+        } else {
+            student = new Student(name, grade);
+        }
         return student;
     }
 
