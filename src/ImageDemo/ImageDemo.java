@@ -17,6 +17,8 @@ public class ImageDemo extends GraphicsApp {
     @Override
     public void initialize() {
         setCanvasSize(SCREEN_WIDTH, SCREEN_WIDTH);
+        // Erstellen des Bildes mit relativem Pfad zur Bilddatei. Der Pfad
+        // wird vom obersten Level des Projektverzeichnisses aus angegeben.
         birdImage = new Image(0,0,"data/bird.png");
     }
 
